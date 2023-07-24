@@ -1,7 +1,7 @@
-use crate::solutions::add_two_numbers::_add_two_numbers;
+use crate::solutions::s0001_two_sums::two_sum;
 mod solutions;
 
 fn main() {
-    let rv = _add_two_numbers(None, None);
+    let rv = two_sum(vec![1, 2, 3, 10, 20], 23);
     println!("Result {:?}", rv)
 }
