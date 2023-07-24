@@ -1,19 +1,3 @@
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-  pub val: i32,
-  pub next: Option<Box<ListNode>>
-}
-
-impl ListNode {
-  #[inline]
-  fn new(val: i32) -> Self {
-    ListNode {
-      next: None,
-      val
-    }
-  }
-}
-
 /// This is an iterative solution. Even though the problem implores a recursive one,
 /// we don't know how long the ListNode chain can be.
 ///
@@ -41,9 +25,11 @@ impl ListNode {
 ///
 /// Return "head".next.
 ///
-/// Time complexity: O(N) where N is the larger of the two input lists
-/// Space complexity: O(N) where N is the larger of the two input lists
-///
+/// Complexity:
+///   Time: O(n)
+///     Need to touch every element in both the inputs.
+///   Space: O(1)
+///     Not counting the returned String, it has no scaling space requirement.
 #[allow(dead_code)]
 pub fn add_two_numbers(
   l1: Option<Box<ListNode>>,
@@ -78,4 +64,20 @@ pub fn add_two_numbers(
   }
 
   head.unwrap().next
+}
+
+#[derive(PartialEq, Eq, Clone, Debug)]
+pub struct ListNode {
+  pub val: i32,
+  pub next: Option<Box<ListNode>>
+}
+
+impl ListNode {
+  #[inline]
+  fn new(val: i32) -> Self {
+    ListNode {
+      next: None,
+      val
+    }
+  }
 }

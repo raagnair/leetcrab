@@ -11,6 +11,15 @@
 /// we update our longest encountered length.
 ///
 /// Return our longest encountered length.
+///
+/// Complexity:
+///     Time: O(n)
+///         Requires traversing forward through the input. On some of the forward traversals, we
+///         perform some removals from the HashMap, but even in the worst case, we would only have
+///         a total of n removals in the end, which means the time complexity doesn't push past n.
+///     Space: O(1)
+///         While we are maintaining a HashMap to track visited indices, it can only grow to the
+///         size of all possible u8 bytes a String can contain, which is a small amount.
 #[allow(dead_code)]
 pub fn length_of_longest_substring(s: String) -> i32 {
     use std::collections::HashMap;
