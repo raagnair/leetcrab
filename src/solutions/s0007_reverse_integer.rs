@@ -9,7 +9,7 @@
 ///         The steps of the algo doesn't scale as the input gets larger.
 ///     Space: O(log(n))
 ///         Need a string that holds all the digits of the input, which can be expressed
-///         vaguely as log_10(input), which is in the order of log(10).
+///         vaguely as log_10(n), which is in the order of log(n).
 #[allow(dead_code)]
 pub fn reverse(x: i32) -> i32 {
     let abs_x: u32 = x.abs() as u32;
