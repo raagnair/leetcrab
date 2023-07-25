@@ -1,7 +1,7 @@
-use crate::solutions::s0006_zigzag_conversion::convert;
+use crate::solutions::s0007_reverse_integer::reverse;
 mod solutions;
 
 fn main() {
-    let rv = convert("PAYPALISHIRING".to_string(), 3);
+    let rv = reverse(-123);
     println!("Result {:?}", rv)
 }
