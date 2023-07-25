@@ -1,7 +1,7 @@
-use crate::solutions::s0008_string_to_integer::my_atoi;
+use crate::solutions::s0009_palindrome_number::is_palindrome;
 mod solutions;
 
 fn main() {
-    let rv = my_atoi("2147483648".to_string());
+    let rv = is_palindrome(1234567);
     println!("Result {:?}", rv)
 }
