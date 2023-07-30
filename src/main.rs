@@ -1,7 +1,7 @@
-use crate::solutions::s0011_container_with_most_water::max_area;
+use crate::solutions::s0012_integer_to_roman::int_to_roman;
 mod solutions;
 
 fn main() {
-    let rv = max_area(vec![1, 1]);
+    let rv = int_to_roman(87);
     println!("Result {:?}", rv)
 }

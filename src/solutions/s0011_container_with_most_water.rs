@@ -9,7 +9,7 @@
 ///     Therefore, as we move from outside to inside in search of the tallest area, it doesn't make
 ///         sense for us to move the taller vertical. Since the shorter height is the one that sets
 ///         the height of the resultant area, moving the taller vertical keeps the resultant area's
-///         height the same and decreases the width by 1, which always lends a smaller area.
+///         height the same (at best) and decreases the width by 1, meaning a smaller area.
 ///
 /// The three observations above lead us to our simple algorithm. Two pointers starting from the
 /// outside of the input array, moving towards the center. At each iteration, record any area that
