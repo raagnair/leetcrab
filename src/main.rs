@@ -1,7 +1,7 @@
-use crate::solutions::s0012_integer_to_roman::int_to_roman;
+use crate::solutions::s0013_roman_to_integer::roman_to_int;
 mod solutions;
 
 fn main() {
-    let rv = int_to_roman(87);
+    let rv = roman_to_int("XCII".into());
     println!("Result {:?}", rv)
 }
