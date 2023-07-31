@@ -1,7 +1,7 @@
-use crate::solutions::s0013_roman_to_integer::roman_to_int;
+use crate::solutions::s0014_longest_common_prefix::longest_common_prefix;
 mod solutions;
 
 fn main() {
-    let rv = roman_to_int("XCII".into());
+    let rv = longest_common_prefix(vec![String::from("abc"), String::from("abf"), String::from("abbb")]);
     println!("Result {:?}", rv)
 }
