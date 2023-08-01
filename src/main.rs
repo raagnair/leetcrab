@@ -1,7 +1,7 @@
-use crate::solutions::s0014_longest_common_prefix::longest_common_prefix;
+use crate::solutions::s0015_3sum::three_sum;
 mod solutions;
 
 fn main() {
-    let rv = longest_common_prefix(vec![String::from("abc"), String::from("abf"), String::from("abbb")]);
+    let rv = three_sum(vec![-1,0,1,2,-1,-4]);
     println!("Result {:?}", rv)
 }
