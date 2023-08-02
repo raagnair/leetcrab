@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+use std::collections::HashSet;
 
 /// This approach sorts the array first, then uses three pointers to try to find valid three-sum
 /// combos that add up to 0. The left-most pointer moves from left to right, and at each point it
@@ -12,7 +14,6 @@
 ///         No extra storage beyond the output.
 #[allow(dead_code)]
 pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
-    use std::collections::HashSet;
     nums.sort();
     let mut rv_set: HashSet<Vec<i32>> = HashSet::new();
 
@@ -61,16 +62,12 @@ pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
 ///         Store all elements into the frequency map.
 #[allow(dead_code)]
 pub fn three_sum_works(nums: Vec<i32>) -> Vec<Vec<i32>> {
-    use std::collections::HashMap;
-    use std::collections::HashSet;
-
     let map_of_freq: HashMap<i32, i32> = nums.iter().copied().fold(HashMap::new(), |mut map, v| {
         *map.entry(v).or_insert(0) += 1;
         map
     });
 
     fn process(num: i32, map: &HashMap<i32, i32>) -> HashSet<Vec<i32>> {
-        use std::collections::HashSet;
         let target = -1 * num;
         let mut rv: HashSet<Vec<i32>> = HashSet::new();
 
@@ -130,8 +127,6 @@ pub fn three_sum_works(nums: Vec<i32>) -> Vec<Vec<i32>> {
 ///     I believe we can get away with not using so much space.
 #[allow(dead_code)]
 pub fn three_sum_slow(nums: Vec<i32>) -> Vec<Vec<i32>> {
-    use std::collections::{HashMap, HashSet};
-
     let map_of_freq: HashMap<i32, i32> = nums.iter().copied().fold(HashMap::new(), |mut map, v| {
         *map.entry(v).or_insert(0) += 1;
         map
